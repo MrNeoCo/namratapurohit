@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+    const navigate = useNavigate();
     return (
         <footer
             className="relative py-16 text-white"
@@ -16,16 +18,12 @@ const Footer = () => {
             <div className="relative z-10 max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-3 gap-10">
                 {/* Quick Links */}
                 <div>
-
                     <h3 className="text-xl font-bold mb-4">Quick Links</h3>
                     <ul className="space-y-2 text-sm">
-                        <li><a href="/" className="hover:underline">Home</a></li>
-                        <li><a href="/about" className="hover:underline">About</a></li>
-                        <li><a href="/products" className="hover:underline">Programs</a></li>
-                        <li><a href="/testimonial" className="hover:underline">Testimonials</a></li>
-                        <li><a href="/contact" className="hover:underline">Contact</a></li>
+                        <li><button onClick={() => navigate('/about')} className="hover:underline">About</button></li>
+                        <li><button onClick={() => navigate('/products')} className="hover:underline">Programs</button></li>
+                        <li><button onClick={() => navigate('/contact')} className="hover:underline">Contact</button></li>
                     </ul>
-
                 </div>
 
                 {/* Social & Contact */}
@@ -34,8 +32,7 @@ const Footer = () => {
                     <p>Follow me on social media:</p>
                     <div className="flex space-x-4 mt-4">
                         <a href="https://instagram.com/namratapurohit" className="hover:underline">Instagram</a>
-                        <a href="https://facebook.com/" className="hover:underline">Facebook</a>
-                        <a href="https://twitter.com/" className="hover:underline">Twitter</a>
+                        <a href="https://www.facebook.com/NamrataPurohit248/" className="hover:underline">Facebook</a>
                     </div>
                 </div>
 
