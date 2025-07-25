@@ -21,7 +21,6 @@ const Contact = () => {
         setFormData({ name: "", email: "", message: "" });
     };
 
-    // Auto-hide thank you message
     useEffect(() => {
         if (submitted) {
             const timer = setTimeout(() => setSubmitted(false), 3000);
@@ -31,7 +30,7 @@ const Contact = () => {
 
     return (
         <section
-            className="w-full min-h-screen flex items-center justify-center px-4 py-20 md:px-10"
+            className="w-full h-screen flex items-center justify-center px-4 py-16 md:px-10"
             style={{
                 background: "radial-gradient(#DED1D1 0%, #097975 30%, #121212 100%)",
             }}
@@ -40,11 +39,11 @@ const Contact = () => {
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="w-full max-w-3xl bg-white/10 backdrop-blur-lg p-8 md:p-12 rounded-3xl shadow-2xl border border-white/20 text-white"
+                className="w-full max-w-3xl sm:mx-4 mx-auto bg-white/10 backdrop-blur-lg p-6 md:p-10 rounded-3xl shadow-2xl border border-white/20 ml-7 mr-7 text-white"
             >
                 <div className="text-center">
-                    <h2 className="text-4xl font-bold mb-2">Get in Touch</h2>
-                    <p className="text-lg text-gray-200 mb-6">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-2">Get in Touch</h2>
+                    <p className="text-base md:text-lg text-gray-200 mb-6">
                         We'd love to hear from you! Drop your details and we’ll connect back soon.
                     </p>
                 </div>
@@ -94,7 +93,7 @@ const Contact = () => {
                     </div>
                 </form>
             </motion.div>
-        </section>
+        </section >
     );
 };
 
